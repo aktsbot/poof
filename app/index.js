@@ -33,12 +33,13 @@ app.use((req, res, next) => {
 // --- end of helmet security
 
 app.use(morgan("tiny"));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(`${config.basePath}`, router);
 
 // 404 and other error handlers
-app.use((req, res) => {
-  return res.status(404).send("Not found");
+app.use((req, res, next) => {
+  next({ statusCode: 404, message: "Not found" });
 });
 
 app.use((err, req, res, next) => {
