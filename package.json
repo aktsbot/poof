@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon"
+    "dev": "NODE_ENV=development nodemon"
   },
   "keywords": [],
   "author": "aktsbot",
