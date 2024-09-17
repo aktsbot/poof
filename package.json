@@ -1,0 +1,22 @@
+{
+  "name": "poof",
+  "version": "0.0.1",
+  "main": "app/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "aktsbot",
+  "license": "ISC",
+  "description": "A one-time-view-only message sharing service",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
