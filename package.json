@@ -13,8 +13,7 @@
   "description": "A one-time-view-only text sharing service",
   "dependencies": {
     "better-sqlite3": "^11.3.0",
-    "express": "^4.21.0",
-    "morgan": "^1.10.0"
+    "express": "^4.21.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

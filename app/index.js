@@ -1,5 +1,4 @@
 import express from "express";
-import morgan from "morgan";
 
 import config from "./config.js";
 import router from "./routes.js";
@@ -32,7 +31,13 @@ app.use((req, res, next) => {
 });
 // --- end of helmet security
 
-app.use(morgan("tiny"));
+// http logger
+app.use((req, res, next) => {
+  res.on("finish", function () {
+    console.log(req.method, decodeURI(req.url), res.statusCode);
+  });
+  next();
+});
 app.use(express.urlencoded({ extended: true }));
 
 app.use(`${config.basePath}`, router);
